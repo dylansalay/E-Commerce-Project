@@ -11,7 +11,7 @@ const config = {
     messagingSenderId: "754702703732",
     appId: "1:754702703732:web:bae3dc3069e0ce7a5fc521",
     measurementId: "G-YSLQX9XVNM"
-  }
+};
 
 firebase.initializeApp(config);
 
@@ -20,7 +20,7 @@ export const firestore = firebase.firestore();
 
 
 const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({ prompt: 'select_account' })
+provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
